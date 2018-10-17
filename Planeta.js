@@ -18,7 +18,7 @@ module.exports = class Planeta
     //Obtiene posición en coordenadas cartesianas a partir del día indicado 
     getPosicion(dia)
     {
-        if (!this.sentidoHorario) dia = dia * -1;
+        if (this.sentidoHorario) dia = dia * -1;
         
         this.x = this.centro.x + this.r * Math.cos((this.w * this.C1 * dia) + (this.fi * this.C1));
         this.y = this.centro.y + this.r * Math.sin((this.w * this.C1 * dia) + (this.fi * this.C1));
